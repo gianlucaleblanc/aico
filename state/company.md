@@ -4,5 +4,5 @@
 - **Sender name:** Gianluca
 - **Domain:** keystonefrontdesk.com
 - **Contact mailbox:** keystonefrontdeskhelp@gmail.com (reply-to and customer contact)
-- **Postal address for email footers:** NOT YET PROVIDED — no email may be sent until this exists.
+- **Postal address for email footers:** provided by the owner on 2026-11-16 but deliberately NOT stored here while this repository is public. The coordinating session will add it once the owner makes the repo private (or supplies a PO box / virtual address they are happy to publish). No email may be sent until it is recorded here.
 - **Time zone for scheduling and send times:** America/New_York
