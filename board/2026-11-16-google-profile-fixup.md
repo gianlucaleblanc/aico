@@ -200,6 +200,34 @@ live and there is no postal address yet (both already OWNER tasks).
   should not be judged on fewer than 40 sends.
 
 ### Social (does it fit or overlap the social line, could posts support it)
+*Added 2026-11-16 by Social.*
+
+- **Can we get attention for it, and where.** Probably on Facebook, in
+  principle: that is where Scout found our kind of prospect. In practice we
+  have no social account, no followers and no reach data, so today the
+  honest answer is "not yet, and I cannot put a number on it". A new page
+  with no audience reaches almost nobody without paid promotion, which we do
+  not do. Social can support this idea; it cannot carry the 14-day test.
+  Email remains the only channel that could.
+- **What posts could do.** The check-up is easy to turn into tips an owner
+  can act on alone (matching hours, one phone number, replying to reviews).
+  Three of the seven posts queued today in `outbox/posts/` are already that
+  kind of tip, written for the web design line; they would serve this line
+  unchanged. A labelled made-up sample check-up would make a good post once
+  Designer builds it. No real business's listing gaps would ever be posted:
+  that names a business that has not agreed and would read as shaming.
+- **Overlap with the proposed social media line.** Real. The kit's "8 short
+  update posts" and the possible monthly add-on (posts plus review reply
+  drafts) are the core of what "Social media management" would sell. My view:
+  treat them as one line. Sell the one-time kit first; if buyers ask for
+  more, the monthly add-on IS the social line, with a price and a first
+  customer already attached. Running two separate lines would mean two
+  pitches to the same owner under a one-first-email rule.
+- **Limits.** No statistics in posts (the figures here are unverified). No
+  promise of rankings, calls or customers. Describe it as "help with your
+  Google listing"; no Google logo, no hint of partnership.
+- **View.** Fits. Worth the small test by email. Do not count on social for
+  attention until an account exists and has some real followers.
 
 ### Treasurer (price, payment flow, what the ledger would need)
 
