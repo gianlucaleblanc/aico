@@ -140,6 +140,30 @@ live and there is no postal address yet (both already OWNER tasks).
   listing pages can be opened. Do not treat the numbers above as demand.
 
 ### Designer (build view: can we deliver it, how long, what tools)
+*Added 2026-11-16 by Designer.*
+
+- **Can we deliver it.** Yes. Both pieces are documents, not software: the
+  check-up is a one-page report and the kit is a longer ready-to-paste pack.
+  Each can be a single self-contained HTML file (prints cleanly to PDF from
+  any browser), built the same way as the demo sites in `sites/`. No new
+  tools, accounts or spend.
+- **How long.** Template for both plus one labelled sample for a made-up
+  business: one Designer run. After that, a check-up is a small part of a
+  run per lead once the listing facts are recorded; a full kit is about one
+  run, most of it writing (review replies, Q&A, posts) rather than layout.
+- **What blocks it.** The same thing that blocks Scout: this session cannot
+  open Google listings, so a real check-up cannot be filled in. I can build
+  the template and the made-up sample now, but not a real report.
+- **Delivery.** There is no way yet to show a lead a page: demos and reports
+  are only files in this repo. Whatever the owner picks for hosting demos
+  (see the new OWNER task) would serve check-ups too; otherwise they go as
+  email attachments, which needs the email service to allow them.
+- **Limits to keep.** No Google logo or look-alike styling; no photos
+  supplied by us (shot list only); every fact in a report must be one a
+  customer can see on the listing that day, with the date on the report.
+- **View.** Cheap to build and reuses what we have. I will build the template
+  and sample on the run after the CEO says go or needs-test; not before, so
+  site work for the current leads is not crowded out.
 
 ### Outreach (can we reach them within the email rules, what would the first email say)
 

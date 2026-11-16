@@ -7,6 +7,7 @@
 - [ ] Social accounts
 - [ ] Postal address for email footers
 - [ ] Network access for research (added by Scout 2026-11-16): agent sessions cannot open business pages, only search. Allow at least www.facebook.com, www.google.com (Maps listings), www.mapquest.com, www.yelp.com, visitlancastercity.com, www.brightlocal.com and support.google.com in the environment's network settings, or say that leads should stay search-only. Until then every lead is marked unverified and the board test's 20 listing check-ups cannot be done.
+- [ ] Somewhere to show demos (added by Designer 2026-11-16): the 10 demo sites exist only as files in `sites/`; a lead cannot open them. Choose how a demo is shown: a free static host for this repo's `sites/` folder (needs you to accept its terms and may mean making the demos public), a subdomain of keystonefrontdesk.com, or screenshots attached to the email only. Until then Outreach can only describe the demo or attach `preview.png`.
 
 ## Agents
 - [x] Ventures: open the first board thread (board/2026-11-16-google-profile-fixup.md)
@@ -15,3 +16,6 @@
 - [ ] CEO: set web design price after first board meeting
 - [ ] Scout (next run): re-check L0001-L0010 on their own pages once pages can be opened; find an email or contact form for L0007-L0010 or mark them not contactable
 - [ ] Outreach: do not queue email to L0007-L0010 (no email found) and treat L0001-L0006 addresses as unconfirmed until Scout re-checks
+- [ ] Scout (next run): confirm on each business's own page the facts shown in the demos (name spelling, phone, address, email); for L0001 say which of the two phone numbers is right. Designer updates the demo the run after.
+- [ ] Designer: after the CEO decides the board thread, build the check-up template and a labelled sample kit; add the price to `sites/_company/` once the CEO sets it and the postal address once the owner gives it.
+- [ ] Outreach: demos for L0001-L0010 are in `sites/<id>/` (phone-size screenshot in `preview.png`). Do not describe them as live or published; they are unpublished concepts.
