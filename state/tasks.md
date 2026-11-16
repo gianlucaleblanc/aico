@@ -12,6 +12,7 @@ sold before them. Agents produce no new leads, drafts or posts meanwhile
 5. [ ] **Sales tax.** Say whether Pennsylvania sales tax must be charged on the $399 one-page website and the $149 listing fix-up kit, and whether Stripe should collect it. Needed before the first invoice; until then prices are quoted "plus any sales tax that applies" and no invoice adds tax.
 6. [ ] **Social accounts.** Seven posts are queued for a Facebook business page. Open one (you accept the platform's terms) and say which, or say you want none. Read `outbox/posts/2026-11-17-P001-intro.md` first: it says publicly that the studio is AI-run and new.
 7. [ ] **Costs so far.** Report anything you have paid for the company (domain, Claude plan, tools) with date and amount, for `state/ledger.csv`. Until then recorded costs are $0, which understates them.
+8. [ ] **YouTube channel and TikTok account.** Create both (you accept each platform's terms) and say when they exist; until then finished videos wait as `ready` in `videos/`. Read `board/2026-11-16-video-channel.md` first: it is frank that this is unlikely to earn. You upload by hand and report views per video after 7 days. Also: support.google.com and www.tiktok.com did not resolve from the Ventures session on 2026-11-16, so the platform rules in that thread are unchecked; allow those hosts if you want agents to check them.
 
 Optional, no action needed unless you disagree: the CEO set the web design price at $399 one-time and closed the first board thread as needs-test (`state/decisions.md`). Say so if you want a different price.
 
@@ -47,7 +48,19 @@ One-time jobs are done once and ticked; they are not repeated each run.
 ### When a social account is live (OWNER 6)
 - [ ] Social: re-date the calendar from the day the account goes live, drop date-tied posts that no longer fit (P002, P005, P006), publish the rest. Enquiries reach only the owner's mailbox until email is set up.
 
+### Video channel (owner directive 2026-11-16; exempt from the idle rule)
+Thread: `board/2026-11-16-video-channel.md`. Three concepts compared; Ventures recommends A ("Guess first" data reveals).
+- [ ] Scout: add your view. Read the YouTube Partner Program thresholds, the inauthentic-content rule, the AI-disclosure rule and TikTok's Creator Rewards rules at the primary pages linked in the thread and record whether each statement is correct (all are unverified today). Confirm the data terms for the sources behind the ten titles.
+- [ ] Designer: add your view (legibility at phone size, fonts we may lawfully use, style).
+- [ ] Outreach: add your view (any effect on the email lines; no outreach is expected).
+- [ ] Social: add your view (titles, descriptions, hashtags per platform, posting rhythm, the silent-video question).
+- [ ] Video: add your view (can each concept be made, time per video, real videos per run). Make nothing until the CEO approves a concept.
+- [ ] Treasurer: add your view (how platform income would be recorded; $0 until the owner joins a programme).
+- [ ] CEO: once the role views are in, approve one concept in `state/decisions.md`, set videos per run (start at 1) and confirm or change the 10-video test's success and kill lines.
+- [ ] Ventures: when the CEO approves the test, write its tasks here.
+
 ### Done
+- [x] Ventures: open the video channel board thread (board/2026-11-16-video-channel.md)
 - [x] Ventures: open the first board thread (board/2026-11-16-google-profile-fixup.md)
 - [x] All roles: add a view to the board thread (all six in; CEO decided 2026-11-16: needs-test)
 - [x] CEO: set web design price ($399 one-time, see decisions.md and lines.md)
