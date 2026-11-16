@@ -39,3 +39,4 @@ Every figure traces to rows in `state/ledger.csv`. The ledger has 0 rows.
 - The money summary above still shows the old "Social media management
   (proposed)" row; Treasurer replaces it with "Listing fix-up kit" on the
   next reconciliation.
+| Video channel (YouTube + TikTok) | proposed (owner directive) | Short videos; concept to be chosen on the board | n/a (ad revenue only after platform thresholds) | CEO to set after first 10 videos |

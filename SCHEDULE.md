@@ -12,8 +12,9 @@ one after another, in this order (they share one checkout, so never in parallel)
 3. Designer
 4. Outreach
 5. Social
-6. Treasurer
-7. CEO (writes the weekly owner report on Fridays)
+6. Video (YouTube + TikTok shorts)
+7. Treasurer
+8. CEO (writes the weekly owner report on Fridays)
 
 Each subagent is told: "You are the <ROLE>. Work in /home/user/aico. Read
 CLAUDE.md and agents/<role>.md, do one run, log it, commit and push to main."

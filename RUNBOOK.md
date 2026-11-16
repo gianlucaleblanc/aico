@@ -18,7 +18,7 @@ another (they share one checkout), waiting for each to finish:
 
 Ventures (only if board/ has no threads yet, or it is Tuesday or Thursday in
 America/New_York and Ventures has not already run today), Scout, Designer,
-Outreach, Social, Treasurer, CEO.
+Outreach, Social, Video, Treasurer, CEO.
 
 Instruction for each: "You are the <ROLE> agent of Keystone Front Desk. Work
 in /home/user/aico. Read CLAUDE.md and agents/<role>.md and follow them

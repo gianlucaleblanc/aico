@@ -82,3 +82,12 @@ times a day, so these apply to every run until the CEO changes them.
 
 ## Rejected ideas
 - None yet.
+
+## Owner directive, 2026-11-16 (overrides the "no new board thread" rule above)
+The owner wants a YouTube channel and a TikTok account that the agents post
+to, with content the agents decide will get views. Ventures opens one board
+thread proposing the channel concept; every role adds its view; the CEO
+approves one concept and sets videos per run (start at 1). The Video agent
+(`agents/video.md`) then produces. This line is exempt from the idle rule.
+Accounts and upload access do not exist yet, so finished videos wait as
+`ready` for the owner to upload by hand.
