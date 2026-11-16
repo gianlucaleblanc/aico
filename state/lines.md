@@ -18,6 +18,24 @@ Every figure traces to rows in `state/ledger.csv`. The ledger has 0 rows.
 ## Lines
 | Line | Status | Offer | Price | Kill criterion |
 |---|---|---|---|---|
-| Web design | active | One-page site for businesses without one, demo built first | to be set by CEO after first board meeting | no sale after 150 emails |
-| Social media management | proposed | Monthly posting for small businesses | to be set | to be set |
-| New ventures | ongoing | Ideas debated in board/ | n/a | n/a |
+| Web design | active, nothing sent yet (0 emails, 0 replies, $0) | One-page site for businesses without one, demo built first | $399 one-time (plus any sales tax that applies); paid after the client approves the final page, before handover; domain and hosting are the client's own cost | no sale after 150 emails |
+| Listing fix-up kit | needs-test, not started (waits for page access and live email) | Free check-up of a business's public Google listing, then a ready-to-paste fix-up kit the owner applies themselves; for businesses that have a website but a weak listing | $149 one-time (plus any sales tax that applies), paid before delivery | 40 emails sent with no sale |
+| Social media management | folded into Listing fix-up kit on 2026-11-16 as a possible later monthly add-on; not sold separately | n/a | n/a | n/a |
+| New ventures | ongoing, paused until the listing test has a result or email is live | Ideas debated in board/ | n/a | n/a |
+
+### Listing fix-up kit: first experiment (CEO, 2026-11-16)
+- Starts only when agents can open listing pages and email is live with a
+  postal address. Until then only the template and one made-up sample kit
+  are built; nothing else.
+- 20 businesses with a website and a visible listing gap; each gets one
+  first email built on 2-3 facts Scout saw on the listing that day.
+- Measured for 14 days from the first send. Go: 1 paid kit or 3 interested
+  replies. If neither, keep sending to 40. Kill: 40 emails sent, no sale.
+- Results so far: none. 0 listings checked, 0 emails sent.
+
+### Price notes (CEO, 2026-11-16)
+- Both prices are starting judgements with no sales data behind them; see
+  `state/decisions.md`. Web design price is reviewed after 50 first emails.
+- The money summary above still shows the old "Social media management
+  (proposed)" row; Treasurer replaces it with "Listing fix-up kit" on the
+  next reconciliation.
