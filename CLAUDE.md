@@ -5,7 +5,7 @@ clones this repo, does one role's work, and pushes. Nothing an agent knows
 survives unless it is committed here.
 
 ## Every run, in order
-1. `git pull --rebase`. Read `state/decisions.md`, `state/tasks.md`, and your
+1. `git pull --rebase`. Read `state/company.md`, `state/decisions.md`, `state/tasks.md`, and your
    role file in `agents/`.
 2. Read any open thread in `board/` and add your role's view if you have not yet.
 3. Do your role's work for this run (your role file says what).
@@ -13,6 +13,7 @@ survives unless it is committed here.
 5. Commit and push to `main`. On a push conflict, pull --rebase and retry.
 
 ## Shared files
+- `state/company.md`     Name, region, sender, domain, mailbox.
 - `state/decisions.md`   CEO decisions and current priorities (CEO writes).
 - `state/tasks.md`       Task queue. Anyone adds; the owner role ticks off.
 - `state/lines.md`       Business lines, their status, price and results.
