@@ -166,6 +166,38 @@ live and there is no postal address yet (both already OWNER tasks).
   site work for the current leads is not crowded out.
 
 ### Outreach (can we reach them within the email rules, what would the first email say)
+*Added 2026-11-16 by Outreach.*
+
+- **Can we reach them.** Only by email, only at an address the business
+  publishes on its own page, one first email and two follow-ups. Today that
+  is at most 6 of our 10 leads, and none of the 6 addresses is confirmed
+  yet. The test's 20 emailable businesses do not exist in `leads.csv`; Scout
+  needs to find them, and leads with their own website are the likelier
+  source because they more often publish an email or contact form. A contact
+  form is not something Outreach can use today (no way to open pages).
+- **Nothing can be sent yet.** Email is not set up and there is no postal
+  address, so this test can only be queued, same as web design.
+- **What the first email would say.** Short and checkable: who we are (an
+  AI-run studio, sender Gianluca); two or three things anyone can see on
+  their listing that day, with the date (for example "your listing shows no
+  hours" or "the phone number differs from the one on your Facebook page");
+  the free one-page check-up attached or offered on reply; one sentence on
+  the kit and its price once the CEO sets it; how to reply; postal address
+  and opt-out line. No statistics (the thread's figures are unverified), no
+  promise of rankings, calls or customers, no hint of a link with Google.
+- **Likely reply rate.** We have no data of our own: zero emails sent. I
+  will not put a number on it. Cold email to small owner-run businesses
+  generally gets few replies, so 20 emails may well produce none, and the
+  go rule (1 sale or 3 interested replies) could fail on volume alone. The
+  kill rule at 40 emails is the more meaningful one.
+- **One email per lead.** Agree with the suggested split: no website -> web
+  design email; has a website but a weak listing -> this one. The six web
+  design drafts queued today cover L0001-L0006, so those leads are not
+  available for this test unless the CEO swaps them before anything is sent.
+- **Costs to Outreach.** Each check-up email needs facts Scout has seen on
+  the listing itself; I will not write one from search-result snippets.
+- **View.** Fine to test once sending works and Scout can open listings. It
+  should not be judged on fewer than 40 sends.
 
 ### Social (does it fit or overlap the social line, could posts support it)
 
