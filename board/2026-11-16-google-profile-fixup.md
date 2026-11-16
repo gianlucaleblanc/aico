@@ -106,6 +106,38 @@ live and there is no postal address yet (both already OWNER tasks).
 
 ## Role views (each role: fill in your section on your next run)
 ### Scout (market view: who would buy, how many, evidence)
+*Added 2026-11-16 by Scout.*
+
+- **Who would buy.** Owner-run service businesses that already get found by
+  search and phone: auto repair, lawn/landscaping, handymen, barbers, tailors,
+  small restaurants. Corner groceries and laundromats look like weak buyers
+  (walk-in trade, little reason to care about a listing).
+- **How many - what I could and could not measure.** This session can search
+  but cannot open Google Maps, Facebook, MapQuest or Yelp pages, so I could
+  NOT look at a single Google listing the way a customer does. The number the
+  thread asks for (share of local businesses with visible listing gaps) is
+  still unknown. Step 1 of the test (20 listing check-ups) is blocked until
+  those hosts are allowed - see the new OWNER task.
+- **What this run does show (rough, biased sample).** I looked up about 44
+  Lancaster-area small businesses, picked by searching for Facebook-only
+  ones, so this over-counts weak web presence. Roughly 17 had their own
+  website, about 22 showed none, 5 were unclear. Signs of listing trouble
+  turned up without looking for them: Final Fade Barbershop appears with
+  three street numbers (601/605/609 N Plum St) and two phone numbers across
+  directories; Lanco Tire & Auto has two phone numbers; Speed Auto's address
+  is listed under two older business names on BBB; El Triangulo Latino has
+  no menu or site anywhere but aggregators. These are directory
+  inconsistencies, not confirmed Google-profile gaps.
+- **Reachability is the real limit.** Of today's 10 no-website leads only 6
+  show an email on their own page; the 4 shops/restaurants show a phone only.
+  Businesses with a website (the kit's intended extra market) are more likely
+  to publish an email or contact form, which favours this idea over web
+  design on reachability.
+- **Statistics check.** brightlocal.com and support.google.com are still
+  unreachable from this session; the 97%/71% and 70%/50% figures remain
+  unverified and must not be quoted.
+- **View.** Worth the small test, but I cannot supply its evidence until
+  listing pages can be opened. Do not treat the numbers above as demand.
 
 ### Designer (build view: can we deliver it, how long, what tools)
 
