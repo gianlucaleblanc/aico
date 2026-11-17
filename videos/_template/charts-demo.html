@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- Render test for the shared chart components (charts.js + charts.css). Video agent, 2026-11-17.
+     NOT a video and carries NO facts: every label and number is a made-up PLACEHOLDER.
+     ?chart=bars|dots|scale|timeline|counter picks the component; ?theme=ink|paper|teal, ?guides=1, ?t=2.5 as in frame.html.
+     Render: node render.js charts-demo.html /tmp/out.mp4 --query "chart=bars"   (4 s each; the reveal starts at 0.5 s) -->
+<html lang="en" data-theme="ink" data-duration="4"><head><meta charset="utf-8"><meta name="viewport" content="width=1080">
+<title>Chart components (placeholder)</title>
+<link rel="stylesheet" href="charts.css">
+<style>
+:root{--bg:#101a2e;--fg:#f5f3ec;--dim:#b9c2d3;--a:#ffb84d;--b:#5fd0c5;--track:#26334f}
+[data-theme=paper]{--bg:#f5f1e6;--fg:#141b2b;--dim:#4a5468;--a:#a8480a;--b:#0d6b63;--track:#d9d2bf}
+[data-theme=teal]{--bg:#0c3b3a;--fg:#f4f7f2;--dim:#b6d2cd;--a:#ffd166;--b:#ff9e8a;--track:#1b5553}
+*{box-sizing:border-box;margin:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg);color:var(--fg);font-family:Inter,"Liberation Sans",sans-serif}
+.safe{position:absolute;left:72px;right:168px;top:220px;bottom:420px;display:flex;flex-direction:column;gap:40px}
+.kicker{font:700 40px/1.1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.q{font:800 76px/1.08 "Inter Display",Inter,sans-serif;letter-spacing:-.01em;text-wrap:balance}
+#chart{flex:1;min-height:0}
+.src{font:500 40px/1.2 Inter,sans-serif;color:var(--dim)}
+.ph{position:absolute;left:72px;top:120px;font:700 40px/1 "JetBrains Mono",monospace;color:var(--bg);background:var(--a);padding:8px 16px;border-radius:8px}
+.guides .safe{outline:4px dashed #f0f}.guides #chart{outline:2px dashed #0ff}
+</style></head><body>
+<div class="ph">PLACEHOLDER - NOT REAL DATA</div>
+<div class="safe">
+  <p class="kicker" id="kicker"></p>
+  <h1 class="q" id="title"></h1>
+  <div id="chart"></div>
+  <p class="src">Source: PLACEHOLDER (no source, made-up values)</p>
+</div>
+<script src="charts.js"></script>
+<script>
+const q=new URLSearchParams(location.search);if(q.get('guides'))document.body.classList.add('guides');
+const S=.5; // reveal start
+const demos={
+  bars:{theme:'ink',title:'Placeholder bars, longest wins',build:el=>Charts.bars(el,{start:S,unit:' units',items:[
+    {label:'Placeholder A',value:38},{label:'Placeholder B',value:92,hit:true},{label:'Placeholder C with a longer name',value:61},{label:'Placeholder D',value:17},{label:'Placeholder E',value:74}]})},
+  dots:{theme:'paper',title:'Placeholder share of a hundred',build:el=>Charts.dotGrid(el,{start:S,total:100,filled:37,of:'in 100 (PLACEHOLDER)'})},
+  scale:{theme:'teal',title:'Placeholder heights, drawn to scale',build:el=>Charts.scale(el,{start:S,unit:' m',ticks:[0,100,200,300],items:[
+    {label:'Placeholder A',value:120},{label:'Placeholder B',value:290,hit:true},{label:'Placeholder C',value:45}]})},
+  timeline:{theme:'paper',title:'Placeholder events in order',build:el=>Charts.timeline(el,{start:S,from:1900,to:2000,events:[
+    {at:1908,label:'Placeholder event one'},{at:1941,label:'Placeholder event two'},{at:1947,label:'Placeholder event three',hit:true},{at:1986,label:'Placeholder event four'}]})},
+  counter:{theme:'ink',title:'Placeholder key number',build:el=>Charts.counter(el,{start:S,to:1234567,unit:'PLACEHOLDER units',note:'as of PLACEHOLDER year'})},
+};
+const name=demos[q.get('chart')]?q.get('chart'):'bars',demo=demos[name];
+document.documentElement.dataset.theme=q.get('theme')||demo.theme;
+document.getElementById('kicker').textContent='Component: '+name;document.getElementById('title').textContent=demo.title;
+window.seek=t=>Charts.seek(t);
+window.renderAt=function(t){document.getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000});window.seek(t)};
+// build once fonts are in (scale and timeline measure text and the container), then show the requested or live time
+let ready=false;const t0=performance.now();
+document.fonts.ready.then(()=>{demo.build(document.getElementById('chart'));ready=true;
+  if(q.get('t')!==null)renderAt(Number(q.get('t')));
+  else if(!window.__render)(function tick(){window.seek((performance.now()-t0)/1000);requestAnimationFrame(tick)})(); // live preview only
+  else window.seek(0);});
+</script>
+</body></html>

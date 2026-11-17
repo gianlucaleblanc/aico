@@ -1,0 +1,58 @@
+/* Shared chart components for the "Guess first" videos. Video agent, 2026-11-17. Used with charts.js.
+   Colours come from the theme variables of the page (--bg --fg --dim --a --b --track, see frame.html).
+   Rules kept here: smallest text 40px; labels and values in ink (--fg/--dim), never in the series colour;
+   one accent (--a) marks the answer, everything else is --b; no motion in CSS, charts.js draws each frame from t. */
+.ch{position:relative;width:100%;font-family:Inter,"Liberation Sans",sans-serif;color:var(--fg)}
+.ch .mono{font-family:"JetBrains Mono",monospace;font-weight:700;font-feature-settings:"tnum"}
+
+/* bars */
+.ch-bars{display:grid;gap:34px}
+.ch-bars .row{display:grid;gap:12px}
+.ch-bars .lab{display:flex;justify-content:space-between;align-items:baseline;gap:24px;font:600 52px/1.15 Inter,sans-serif}
+.ch-bars .name{min-width:0;text-wrap:balance}   /* long names wrap to a second line, never cut */
+.ch-bars .name::before{content:"\25B6\00A0";color:var(--a);font-size:.7em;vertical-align:.12em;display:none}
+.ch-bars .val{flex:none;font-size:52px;white-space:nowrap}
+.ch-bars .track{height:48px;border-radius:6px;background:var(--track);overflow:hidden}
+.ch-bars .fill{height:100%;width:0;background:var(--b);border-radius:0 6px 6px 0}
+.ch-bars .row.hit .fill{background:var(--a)}
+.ch-bars .row.hit .name::before{display:inline}
+
+/* dot grid */
+.ch-dots{display:flex;flex-direction:column;align-items:flex-start;gap:28px}
+.ch-dots .head{display:flex;flex-direction:column;gap:8px}   /* number above its caption: nothing reflows as the count grows */
+.ch-dots .n{font:800 150px/1 "Inter Display",Inter,sans-serif;font-feature-settings:"tnum"}
+.ch-dots .of{font:600 56px/1.1 Inter,sans-serif;color:var(--dim)}
+.ch-dots .grid{display:grid}
+.ch-dots .dot{border-radius:50%;background:var(--track);place-self:center}
+.ch-dots .dot.on{background:var(--a)}
+
+/* scale drawing: shapes standing on one ground line, heights to one scale, ruler on the left */
+.ch-scale .ground{position:absolute;height:4px;background:var(--dim);border-radius:2px}
+.ch-scale .tick{position:absolute;left:0;font-size:40px;line-height:1;color:var(--dim);transform:translateY(-50%);white-space:nowrap}
+.ch-scale .rule{position:absolute;height:2px;background:var(--track)}
+.ch-scale .shape{position:absolute;background:var(--b);border-radius:6px 6px 0 0}
+.ch-scale .shape.hit{background:var(--a)}
+.ch-scale .val{position:absolute;text-align:center;font-size:48px;line-height:1;white-space:nowrap}
+.ch-scale .val span{background:var(--bg);padding:0 10px;border-radius:6px}
+.ch-scale .name{position:absolute;text-align:center;font:600 40px/1.12 Inter,sans-serif;text-wrap:balance;overflow-wrap:anywhere}
+.ch-scale .name.hit{font-weight:700}
+
+/* timeline: vertical, time runs down, dots at true positions, labels nudged apart when they would collide */
+.ch-time .axis{position:absolute;width:6px;border-radius:3px;background:var(--track)}
+.ch-time .axis i{display:block;width:100%;height:0;border-radius:3px;background:var(--dim)}
+.ch-time .end{position:absolute;left:0;font-size:40px;line-height:1;color:var(--dim);text-align:right;transform:translateY(-50%)}
+.ch-time .dot{position:absolute;width:28px;height:28px;border-radius:50%;background:var(--b);box-shadow:0 0 0 5px var(--bg);transform:translate(-50%,-50%)}
+.ch-time .dot.hit{background:var(--a)}
+.ch-time .link{position:absolute;height:3px;background:var(--dim);transform-origin:left center}
+.ch-time .ev{position:absolute;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.ch-time .ev .when{font-size:44px;line-height:1}
+.ch-time .ev .what{font:600 44px/1.12 Inter,sans-serif}
+.ch-time .ev.hit .what{font-weight:800}
+
+/* key-number counter */
+.ch-count{display:flex;flex-direction:column;gap:20px}
+.ch-count .big{font:800 220px/1 "Inter Display",Inter,sans-serif;font-feature-settings:"tnum";letter-spacing:-.02em;white-space:nowrap}
+.ch-count .big .fix{font-size:.55em;font-weight:700;letter-spacing:0}
+.ch-count .unit{font:700 64px/1.15 Inter,sans-serif}
+.ch-count .note{font:600 48px/1.2 Inter,sans-serif;color:var(--dim)}
+.ch-count .rule{height:10px;width:0;border-radius:5px;background:var(--a)}

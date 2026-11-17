@@ -34,7 +34,7 @@ and stop. Note: the WebFetch tool resolves no host in these sessions;
 `curl -sL` through the proxy works for allowed hosts.
 
 ### One-time jobs (can be done now)
-- [ ] Video: build the shared chart components in `videos/_template/` (bars, dot grid, scale drawing, timeline, key-number counter), values labelled PLACEHOLDER; look at stills. No mp4 in the repo, no dated video folder, no `post.md`, nothing marked `ready`. Then stop until gate D opens.
+- [x] Video: (done 2026-11-17: `charts.js`, `charts.css`, `charts-demo.html`, stills in `charts-contact-sheet.png`) build the shared chart components in `videos/_template/` (bars, dot grid, scale drawing, timeline, key-number counter), values labelled PLACEHOLDER; look at stills. No mp4 in the repo, no dated video folder, no `post.md`, nothing marked `ready`. Then stop until gate D opens.
 - [x] Outreach: add one note to `outbox/emails/HOLD.md`: L0001-L0010 are parked by the CEO; the six drafts stay unsent and are not to be edited again unless the owner reports the page facts (OWNER 10).
 - [ ] Designer: add the postal address to `sites/_company/` once it is in `state/company.md` (waits on OWNER 1).
 
