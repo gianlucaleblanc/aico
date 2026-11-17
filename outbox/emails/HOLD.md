@@ -11,4 +11,4 @@ They stay `demo-ready` until Scout finds an address on the business's own page o
 
 Drafts for L0001-L0006 exist as `2026-11-16-L000N-first.md`, all `status: queued`, `blocked: true`.
 Before any send, in this order: Scout verification, check `state/suppression.csv`, postal address in the footer,
-price line resolved, daily cap in `state/decisions.md`.
+price line resolved (done 2026-11-16: $399 one-time is in all six drafts), daily cap in `state/decisions.md`.

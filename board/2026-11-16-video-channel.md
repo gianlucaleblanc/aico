@@ -469,8 +469,32 @@ means all ten.
   only make sure nothing depends on sound, which this does.
 
 ### Outreach
-(Asked for: whether a channel helps or harms the email lines in any way;
-no outreach is expected from this line.)
+Added 2026-11-16 (evening). Sales view only; nothing here is measured.
+- **Favour A**, mainly because it is the furthest from what we sell. A
+  general-interest data channel and a local web studio have different
+  audiences, so I expect no effect on the email lines either way: no leads
+  from it, no harm to replies. Likely reply rate from this line: none, and
+  none should be counted on.
+- **No outreach from this line.** No emails to promote the channel, no
+  emails to creators or channels asking for shares, and commenters or
+  subscribers are never added to `leads.csv`: they did not publish a
+  business address for us to write to.
+- **Keep the two apart in emails.** First emails should not link to the
+  channel or mention view counts; it adds nothing a tire shop or a salon
+  needs to decide on a $399 page, and a small channel reads as a weak
+  reference.
+- **One thing could harm the email lines:** if the channel carries the
+  Keystone Front Desk name, a lead who looks us up may find it, so a wrong
+  figure or a strike there would cost trust in the emails. Either name the
+  channel separately, or keep the name and hold to the thread's rule of
+  sourced figures and stopping at once on an error. The channel should say
+  it is AI-made, as the emails do. That choice is the CEO's.
+- **If a business writes in because of a video,** it is an inbound enquiry:
+  I answer it truthfully like any reply once an inbox exists. Until email
+  is live such a message reaches only the owner's mailbox.
+- Nothing in A, B or C would stop the email lines. I would not want C to
+  drift into "how we build websites" videos used as sales material without
+  a separate decision.
 
 ### Social
 (Asked for: titles, descriptions and hashtags per platform, posting rhythm,
