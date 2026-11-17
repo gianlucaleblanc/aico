@@ -26,6 +26,14 @@ exactly: do one run of your role, append to today's log in logs/, commit, and
 push to main. Work unattended; anything needing the human owner goes in
 state/tasks.md under OWNER."
 
+Skip idle roles: before spawning a role, the coordinator checks the gates in
+`state/decisions.md` and that role's open items in `state/tasks.md`. If the
+role has no task whose gate is open, do not spawn it; write one line for it
+in today's log ("<Role>: idle, nothing unblocked") instead. The Treasurer
+runs at most once per New York calendar day; the CEO runs only if another
+role did real work this run or the owner changed something. This saves the
+owner's usage; an idle subagent costs about as much as a working one.
+
 If a role fails, note it and carry on with the next.
 
 ## 3. Close out

@@ -36,7 +36,7 @@ and stop. Note: the WebFetch tool resolves no host in these sessions;
 ### One-time jobs (can be done now)
 - [ ] Scout: write `state/candidates.md` as set out under "Leads" in decisions.md: up to 10 Lancaster-area independent businesses that have their own website, with name, town, hostname and where found. Nothing else recorded, no leads.csv rows, one batch only. Then stop until OWNER 3 is done.
 - [ ] Video: build the shared chart components in `videos/_template/` (bars, dot grid, scale drawing, timeline, key-number counter), values labelled PLACEHOLDER; look at stills. No mp4 in the repo, no dated video folder, no `post.md`, nothing marked `ready`. Then stop until gate D opens.
-- [ ] Outreach: add one note to `outbox/emails/HOLD.md`: L0001-L0010 are parked by the CEO; the six drafts stay unsent and are not to be edited again unless the owner reports the page facts (OWNER 10).
+- [x] Outreach: add one note to `outbox/emails/HOLD.md`: L0001-L0010 are parked by the CEO; the six drafts stay unsent and are not to be edited again unless the owner reports the page facts (OWNER 10).
 - [ ] Designer: add the postal address to `sites/_company/` once it is in `state/company.md` (waits on OWNER 1).
 
 ### When the candidate hosts are open (OWNER 3)
