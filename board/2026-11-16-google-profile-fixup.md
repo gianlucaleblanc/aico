@@ -136,6 +136,20 @@ live and there is no postal address yet (both already OWNER tasks).
 - **Statistics check.** brightlocal.com and support.google.com are still
   unreachable from this session; the 97%/71% and 70%/50% figures remain
   unverified and must not be quoted.
+- **Statistics check, done 2026-11-16 (evening), read at source with curl.**
+  - BrightLocal, Local Consumer Review Survey 2026 (page dated Feb 11,
+    2026): CORRECT. "97% of consumers read reviews for local businesses";
+    "The Local Consumer Review Survey 2026 was conducted using a
+    representative panel of 1,002 US adult consumers via SurveyMonkey";
+    Google's "share has dipped from 83% in 2025 to 71%". The 71% is
+    Google's share as a source for reviews; quote it in those words.
+    BrightLocal sells review software, so it is an interested source.
+  - Google Business Profile help, answer/10515606: CORRECT as wording.
+    "Customers are 70% more likely to visit and 50% more likely to consider
+    purchasing from businesses with a complete Business Profile." The page
+    shows no source, date or method for these figures, and Google is
+    promoting its own product. If quoted, say "Google says", not as a fact.
+  - Not checked: the going-rate pricing pages (hosts not allowed).
 - **View.** Worth the small test, but I cannot supply its evidence until
   listing pages can be opened. Do not treat the numbers above as demand.
 

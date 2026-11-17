@@ -13,6 +13,8 @@ sold before them. Agents produce no new leads, drafts or posts meanwhile
 6. [ ] **Social accounts.** Seven posts are queued for a Facebook business page. Open one (you accept the platform's terms) and say which, or say you want none. Read `outbox/posts/2026-11-17-P001-intro.md` first: it says publicly that the studio is AI-run and new.
 7. [ ] **Costs so far.** Report anything you have paid for the company (domain, Claude plan, tools) with date and amount, for `state/ledger.csv`. Until then recorded costs are $0, which understates them.
 8. [ ] **YouTube channel and TikTok account.** Create both (you accept each platform's terms) and say when they exist; until then finished videos wait as `ready` in `videos/`. Read `board/2026-11-16-video-channel.md` first: it is frank that this is unlikely to earn. You upload by hand and report views per video after 7 days. Also: support.google.com and www.tiktok.com did not resolve from the Ventures session on 2026-11-16, so the platform rules in that thread are unchecked; allow those hosts if you want agents to check them.
+9. [ ] **Look at ten Facebook pages by hand (about 15 minutes).** Agents cannot: on 2026-11-16 Facebook sent every request to its login page and its robots.txt bars automated visits; Google Search, Google Maps and MapQuest gave agents nothing either, and Yelp refuses. So L0001-L0010 are still unverified and gate A stays closed. For each page in the `source` column of `state/leads.csv`, please report: does the page exist and look active (date of last post), the exact name, the website field (blank or a link), the email shown, phone, address. For L0001 say which phone number the page shows. For L0007-L0010 say whether any email is shown. Write the answers in `state/leads.csv` notes or tell the coordinating session. Without this, no first email can be sent to any current lead. If you would rather not, say so and Scout will drop all ten and look for leads only where a business has an openable page of its own.
+10. [ ] **More hosts for research (optional, for the video line).** To check TikTok's rules: www.tiktok.com. To confirm data terms and read the figures for the ten video titles: www.noaa.gov, oceanservice.noaa.gov, www.usgs.gov, science.nasa.gov, www.census.gov, data.census.gov, www.bls.gov. Until then no video's figure can be read at source, so none should be made. Note for agents: the WebFetch tool resolves no host in these sessions; `curl -sL` through the proxy works for allowed hosts.
 
 Optional, no action needed unless you disagree: the CEO set the web design price at $399 one-time and closed the first board thread as needs-test (`state/decisions.md`). Say so if you want a different price.
 
@@ -34,8 +36,7 @@ One-time jobs are done once and ticked; they are not repeated each run.
 - [ ] Treasurer: in the money summary of `state/lines.md`, replace the "Social media management (proposed)" row with "Listing fix-up kit". Create no Stripe product or payment link yet (see decisions.md). Reconcile Stripe on the first run of each calendar day only.
 
 ### When agents can open business pages (OWNER 1)
-- [ ] Scout: re-check L0001-L0010 on each business's own page: it exists, has no website, publishes the email shown, name spelling, phone, address. For L0001 say which of the two phone numbers is right. Mark each lead verified or dropped in its leads.csv notes; each draft's `lead_specific_check` line says what Outreach needs. Find an email or contact form for L0007-L0010 or mark them not contactable. Add no new leads until this is done.
-- [ ] Scout: read the board thread's statistics on brightlocal.com and support.google.com and record in the thread whether each figure is correct. Nobody quotes them before that.
+- [ ] Scout (tried 2026-11-16 evening: no business page could be opened, none verified, none dropped; waits on OWNER 9): re-check L0001-L0010 on each business's own page: it exists, has no website, publishes the email shown, name spelling, phone, address. For L0001 say which of the two phone numbers is right. Mark each lead verified or dropped in its leads.csv notes; each draft's `lead_specific_check` line says what Outreach needs. Find an email or contact form for L0007-L0010 or mark them not contactable. Add no new leads until this is done.
 - [ ] Designer: the run after Scout confirms a lead, correct its demo to the confirmed facts.
 - [ ] Outreach: once Scout confirms a lead, re-check its draft against the confirmed facts and `suppression.csv` and clear the "lead unverified" block. No email to L0007-L0010 unless Scout finds an address on the business's own page.
 
@@ -50,7 +51,7 @@ One-time jobs are done once and ticked; they are not repeated each run.
 
 ### Video channel (owner directive 2026-11-16; exempt from the idle rule)
 Thread: `board/2026-11-16-video-channel.md`. Three concepts compared; Ventures recommends A ("Guess first" data reveals).
-- [ ] Scout: add your view. Read the YouTube Partner Program thresholds, the inauthentic-content rule, the AI-disclosure rule and TikTok's Creator Rewards rules at the primary pages linked in the thread and record whether each statement is correct (all are unverified today). Confirm the data terms for the sources behind the ten titles.
+- [ ] Scout: still to do when hosts are allowed (OWNER 10): TikTok's Creator Rewards and AI-label rules; data terms and answers for the ten titles. (View added and the YouTube statements checked 2026-11-16; see the thread: new-channel threshold becomes 20 million Shorts views from 2027-02-01.)
 - [ ] Designer: add your view (legibility at phone size, fonts we may lawfully use, style).
 - [ ] Outreach: add your view (any effect on the email lines; no outreach is expected).
 - [ ] Social: add your view (titles, descriptions, hashtags per platform, posting rhythm, the silent-video question).
@@ -60,6 +61,8 @@ Thread: `board/2026-11-16-video-channel.md`. Three concepts compared; Ventures r
 - [ ] Ventures: when the CEO approves the test, write its tasks here.
 
 ### Done
+- [x] Scout: checked the listing thread's statistics at source 2026-11-16 (97%, 71%/83%, 1,002 adults, 70%/50% all appear as written; caveats in the thread). They may be quoted with the wording and attribution recorded there.
+- [x] Scout: added view to the video channel thread and checked its YouTube statements at source
 - [x] Ventures: open the video channel board thread (board/2026-11-16-video-channel.md)
 - [x] Ventures: open the first board thread (board/2026-11-16-google-profile-fixup.md)
 - [x] All roles: add a view to the board thread (all six in; CEO decided 2026-11-16: needs-test)

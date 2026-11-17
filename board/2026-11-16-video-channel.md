@@ -331,10 +331,84 @@ Each role: add your view under your heading (a few lines; say if you favour
 A, B or C, and anything that would stop it).
 
 ### Scout
-(Asked for: read the monetisation thresholds and the inauthentic-content and
-AI-disclosure rules at the primary pages listed above and record whether
-each statement here is correct; confirm the data terms for the sources
-behind the ten titles.)
+Added 2026-11-16 (evening). Pages were read with `curl` through the session
+proxy; the WebFetch tool could not resolve any host. Quotes are from the
+English pages as served that evening.
+
+**Checked at source (support.google.com)**
+- *YouTube Partner Program threshold, ad revenue from Shorts* — CORRECT
+  today. answer/72851: "Get 1,000 subscribers with 4,000 qualified watch
+  hours in the last 12 months, or ... 1,000 subscribers with 10 million
+  qualified Shorts views in the last 90 days." Note "qualified", not
+  "public", views. Review is "typically in about 1 month".
+- *Thresholds rise on 2027-02-01* — CORRECT, and the figures are now known.
+  answer/12843009: "Starting Feb. 1, 2027, YPP entry thresholds for new
+  creators are changing to 8,000 qualified watch hours in the last 365 days,
+  or 20M qualified Shorts views in the last 90 days, in addition to still
+  needing 1k subscribers." A channel started now would almost certainly
+  apply under the new rule, so the figure to plan against is **20 million
+  Shorts views in 90 days**, not 10 million. answer/12504220 adds that from
+  the same date a channel already in the programme needs at least 10 million
+  qualified Shorts views in the last 90 days to earn from the Shorts pool in
+  a given month.
+- *Lower tier (fan funding)* — PARTLY CORRECT. answer/12843009: "500
+  subscribers and either 3,000 qualified watch hours in the last year or 3M
+  qualified Shorts views in the last 90 days", unchanged in 2027. The "3
+  public uploads in 90 days" condition in this thread does not appear on the
+  pages I read; treat it as unconfirmed.
+- *Creators keep 45% of their share of a pooled fund* — CORRECT.
+  answer/12504220: "Monetizing creators will keep 45% of their allocated
+  revenue". The page publishes no rate per 1,000 views; the $0.01-$0.10
+  estimates stay third-party and unverified.
+- *"Repetitious content" renamed "inauthentic content" on 2025-07-15* —
+  CORRECT. answer/1311392, dated July 15, 2025: "renaming this policy from
+  'repetitious content' to 'inauthentic content.' This type of content has
+  always been ineligible for monetization". It is a monetisation rule on
+  that page, as the thread says.
+- *It names AI content made from generic templates* — CORRECT, word for
+  word: "AI-generated content made with generic or unoriginal templates
+  giving the impression of mass production without adding the creator's
+  original, authentic insights or perspective". The page also lists "Image
+  slideshows, templated storylines, or scrolling text with minimal or no
+  narrative, commentary, or educational value" and says channels "where
+  content feels interchangeable from video to video are not allowed to
+  monetize". This bears directly on concept B and on a fixed
+  question-countdown-reveal skeleton in A.
+- *AI disclosure is about realistic-looking content* — CORRECT.
+  answer/14328491: "We require creators to disclose AI-generated or altered
+  content that seems realistic"; "Creators don't need to disclose
+  non-realistic content that's made with AI"; a "fully animated video" is
+  among the not-realistic examples, and using AI for an "outline, script,
+  thumbnail, title, or infographic" is listed as production assistance that
+  needs no disclosure. So an animated chart does not appear to need the box
+  ticked. That is my reading of the page, not a ruling; the owner ticks or
+  does not tick the box at upload. Our own AI-made label stays regardless.
+
+**Could not check**
+- *TikTok Creator Rewards (10,000 followers, 100,000 views in 30 days,
+  videos over one minute) and TikTok's AI-label rule* — NOT CHECKED.
+  www.tiktok.com is not on the allowed list. Still unverified.
+- *Data terms for the ten titles (NOAA, USGS, NASA, Census Bureau, BLS)* —
+  NOT CHECKED. None of those agencies' hosts is allowed, so neither the
+  terms nor any answer could be read. No title is confirmed. The Video agent
+  cannot take a number "from the source on the day" either until the hosts
+  are allowed (OWNER task 10).
+- The third-party view counts (MetaBallStudios, RED SIDE, Data Is Beautiful,
+  the sorting video) and the 2019 sound-off survey — NOT CHECKED, hosts not
+  allowed.
+
+**Market view.** I have no evidence at source on who watches silent data
+shorts or how many, and found none; the thread's audience description is a
+reasonable guess, not a finding. What the checked pages do establish: the
+money threshold for a new channel doubles on 2027-02-01, and YouTube's own
+text describes templated AI video as ineligible. Both make earning less
+likely than the thread already says. Of the three, A is the one I would
+test, because each video has its own data and picture; B matches the
+ineligible-content wording most closely. What would stop it for me: any
+video whose figure has not been read at the primary dataset, which today
+means all ten.
+- Correction to the 10-video test note: at 1,000 views a video we would be
+  about 20,000 times short of the 2027 threshold, not "several thousand".
 
 ### Designer
 (Asked for: look and legibility at phone size, type sizes, which fonts in
