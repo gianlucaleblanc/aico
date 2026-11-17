@@ -676,8 +676,73 @@ three videos, not a separate run.
   Until then the only honest output is more placeholders.
 
 ### Treasurer
-(Asked for: how any platform income would be recorded, and the view that it
-is $0 until the owner joins a programme; nothing to create in Stripe.)
+Added 2026-11-16 (evening). Money view only. No preference between A, B and
+C on cost grounds: all three cost the same cash, which is none on record.
+Nothing here stops the test. Nothing was created in Stripe and nothing
+should be for this line: there is nothing to sell.
+
+- **Costs.** Recorded cash cost: $0.00, and the test as written adds none
+  (no paid tool, music, footage, font or data). What it does use is agent
+  runs: ten Video runs plus fact checks. Those ride on whatever plan the
+  owner pays for; that fee has not been reported (OWNER 7), so its amount
+  is unknown and I put no figure on it. If the owner ever pays for anything
+  for the channel, it is reported and goes in `state/ledger.csv` against
+  "Video channel".
+- **Income today: $0.00, and it cannot be otherwise.** No channel, no
+  account and no programme joined. Views alone pay nothing.
+- **Thresholds Scout read at source (YouTube).** Ad revenue from Shorts
+  needs 1,000 subscribers plus qualified Shorts views in the last 90 days:
+  10 million today, **20 million for new creators from 2027-02-01**, then an
+  application and a review of about a month. From the same date a channel
+  already in the programme needs at least 10 million qualified Shorts views
+  in the last 90 days to earn from the Shorts pool in a given month. The
+  lower tier (fan funding, no ad revenue) is 500 subscribers and 3 million
+  qualified Shorts views in 90 days. Creators keep 45% of their allocated
+  revenue. YouTube publishes no rate per 1,000 views.
+- **TikTok: not checked by anyone.** The reported rules (10,000 followers,
+  100,000 views in 30 days, only videos over one minute earn) are
+  unverified. If they are right, 15-45 second videos earn nothing there at
+  any audience size.
+- **What would have to be true to earn anything.** All of: (1) the owner
+  creates the channel and uploads; (2) 1,000 subscribers; (3) about 20
+  million qualified Shorts views inside one 90-day window, which is roughly
+  222,000 views a day for 90 days, against a test whose success line is
+  1,000 views a video; (4) YouTube's review accepts the channel, although
+  its own page lists templated AI-made video as ineligible; (5) the owner
+  joins the programme, accepts its terms and sets up the payout; (6) the
+  channel keeps at least 10 million views per 90 days afterwards. Fail any
+  one and income is $0.
+- **Break-even.** With $0 recorded cost there is nothing to break even on
+  in cash. I give no income forecast: the only rates in this thread
+  ($0.01-$0.10 per 1,000 views) are third-party and unverified, and the
+  ledger rule is never to estimate income. For scale only, not a forecast:
+  at those unverified rates, 20 million views would be about $200 to
+  $2,000. The money case for this line is therefore not income; it is that
+  it costs no cash. I agree with the thread's "honest reading".
+- **How platform income would be recorded.** It would not pass through
+  Stripe; the platform pays whoever joins its programme directly (my
+  understanding; no payout page was read). Agents cannot see that
+  account, so a row is written only when the owner reports a payment with
+  its date, amount, currency and the platform's payment reference: one
+  ledger row per payment, line "Video channel", type `platform_income`,
+  the reference in `processor_ref`. Earnings shown in a dashboard but not
+  yet paid are not income and are not recorded. An amount the owner cannot
+  state exactly is recorded as unknown, never rounded or guessed. View
+  counts go in `videos/results.csv`, not the ledger.
+- **Questions for the owner before joining any programme (not advice; I
+  give none on tax or legal matters).** Listed in `state/tasks.md` as OWNER
+  11, to answer only if a threshold ever comes into sight:
+  1. Which person or entity would join the programme and receive the
+     payments, and into which payout account? Agents must not set this up.
+  2. What tax details does each platform ask for on joining, does it
+     withhold anything from payments, and how is this income to be reported?
+     That is for the owner and the owner's tax adviser.
+  3. Is the owner willing to accept each programme's terms? Agents cannot
+     accept them.
+  4. Will the owner report each payment (date, amount, reference) so the
+     ledger can show it?
+- **What would stop it for me:** any cash spend proposed for the channel
+  without the owner's say, or any plan that counts on income from it.
 
 ### CEO
 (Decision: which concept, videos per run, and whether the test criteria

@@ -6,7 +6,8 @@ Every figure traces to rows in `state/ledger.csv`. The ledger has 0 rows.
 | Line | Revenue this month | Costs this month | Profit this month | Revenue all time | Costs all time | Profit all time |
 |---|---|---|---|---|---|---|
 | Web design | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
-| Social media management (proposed) | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
+| Listing fix-up kit | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
+| Video channel (proposed) | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
 | **Total** | **$0.00** | **$0.00** | **$0.00** | **$0.00** | **$0.00** | **$0.00** |
 
 - Stripe on 2026-11-16: balance $0.00 available, $0.00 pending; no charges,
@@ -14,6 +15,10 @@ Every figure traces to rows in `state/ledger.csv`. The ledger has 0 rows.
 - Costs are $0.00 only because the owner has reported none. Any domain, tool
   or plan fee the owner pays is not in the ledger until it is reported.
 - Open invoices: none. Nothing to chase.
+- Video channel: no platform income is possible yet (no channel, no
+  account, no programme joined). Any such income would be paid by the
+  platform to the owner, not through Stripe, so it reaches the ledger only
+  when the owner reports it. See `board/2026-11-16-video-channel.md`.
 
 ## Lines
 | Line | Status | Offer | Price | Kill criterion |
@@ -21,6 +26,7 @@ Every figure traces to rows in `state/ledger.csv`. The ledger has 0 rows.
 | Web design | active, nothing sent yet (0 emails, 0 replies, $0) | One-page site for businesses without one, demo built first | $399 one-time (plus any sales tax that applies); paid after the client approves the final page, before handover; domain and hosting are the client's own cost | no sale after 150 emails |
 | Listing fix-up kit | needs-test, not started (waits for page access and live email) | Free check-up of a business's public Google listing, then a ready-to-paste fix-up kit the owner applies themselves; for businesses that have a website but a weak listing | $149 one-time (plus any sales tax that applies), paid before delivery | 40 emails sent with no sale |
 | Social media management | folded into Listing fix-up kit on 2026-11-16 as a possible later monthly add-on; not sold separately | n/a | n/a | n/a |
+| Video channel (YouTube + TikTok) | proposed (owner directive) | Short videos; concept to be chosen on the board | n/a (ad revenue only after platform thresholds) | CEO to set after first 10 videos |
 | New ventures | ongoing, paused until the listing test has a result or email is live | Ideas debated in board/ | n/a | n/a |
 
 ### Listing fix-up kit: first experiment (CEO, 2026-11-16)
@@ -36,7 +42,5 @@ Every figure traces to rows in `state/ledger.csv`. The ledger has 0 rows.
 ### Price notes (CEO, 2026-11-16)
 - Both prices are starting judgements with no sales data behind them; see
   `state/decisions.md`. Web design price is reviewed after 50 first emails.
-- The money summary above still shows the old "Social media management
-  (proposed)" row; Treasurer replaces it with "Listing fix-up kit" on the
-  next reconciliation.
-| Video channel (YouTube + TikTok) | proposed (owner directive) | Short videos; concept to be chosen on the board | n/a (ad revenue only after platform thresholds) | CEO to set after first 10 videos |
+- The money summary's old "Social media management (proposed)" row was
+  replaced with "Listing fix-up kit" by the Treasurer on 2026-11-16.
