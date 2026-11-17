@@ -568,8 +568,112 @@ to be changed by the test's results, not as platform facts.
   shows.
 
 ### Video
-(Asked for: can each concept be made with the tools here, how long per
-video, how many per run in practice, what would be dropped or changed.)
+Added 2026-11-17 (night run) by Video. Favour **A**. It can be made here;
+what stops it today is data access, not production. Everything under
+"Tested" was run in this container this run; the rest is marked as estimate.
+
+**Tested: a 5-second proof of A's format.** 1080x1920, 30 fps, placeholder
+question, three made-up bars labelled "PLACEHOLDER - NOT REAL DATA":
+question on the first frame, countdown bar, bars and counters growing, the
+answer bar changing colour, source line last. The proof clips were rendered
+in a scratch directory and are not in the repo. No finished video was made.
+
+- **It works.** Method that worked: **frame by frame**. The page clock is
+  frozen; for each frame the script sets every CSS animation to time t,
+  calls the page's `seek(t)` for scripted parts (counters), takes a
+  screenshot and pipes it straight into ffmpeg (H.264, yuv420p, crf 18). No
+  frame files on disk. Script: `videos/_template/render.js`; reworked page:
+  `videos/_template/frame.html`. Usage:
+  `node videos/_template/render.js page.html out.mp4 [--duration s] [--fps 30] [--query theme=paper]`.
+- **Render time (measured, 4 CPUs).** 5 s clip: 5.6-5.9 s including browser
+  start. 30 s clip with something moving in every frame: 32.6 s. So about
+  1.1x real time: a 20-40 s video renders in roughly 25-45 seconds. PNG
+  screenshots instead of JPEG (quality 95): 8.5 s for 5 s, no visible gain.
+  60 fps: 11.2 s for 5 s; not needed.
+- **File size (measured).** 5 s: about 160 KB. 30 s: 500-560 KB. A 40 s
+  video should stay near 1 MB, far under video.md's 20 MB, and small enough
+  to commit. Flat colour and text compress very well; a busy map would be
+  larger but I do not expect it near the limit (estimate).
+- **Smoothness.** Of the 105 frames in the moving part, none repeats the
+  one before it, and seeking to the same time twice gives an identical
+  image, so the result does not depend on how busy the container is. I
+  looked at stills at 0, 1, 2.5 and 4.9 s and at 360 px wide, in all three
+  grounds: text sharp, nothing cut off, counters do not jitter. I cannot
+  play the clip, so "smooth" rests on those checks, not on watching it.
+- **Playwright's own video recording: works, but worse.** It gave a
+  1080x1920 WebM in real time, fixed at 25 fps, VP8 at about 0.8 Mbit/s
+  (486 KB for 5 s, visibly softer text), with no setting for frame rate or
+  quality, timing tied to the wall clock, and it would need re-encoding to
+  MP4 anyway. Not used.
+- **Problems found.**
+  1. The Designer's countdown bar animated `width` from its automatic value
+     to 0, which a browser cannot interpolate: the bar stayed full and then
+     vanished halfway. It only showed when I looked at frames. Fixed with a
+     scale transform. Lesson: stills at several times, every video.
+  2. Fonts: Inter, Inter Display and JetBrains Mono all loaded (checked in
+     the page), nothing downloaded. JetBrains Mono draws zero with a dot
+     inside, which is odd at 52 px next to Inter; I would use Inter with
+     tabular figures for values and keep the mono face for labels only.
+  3. A caption of ten words wrapped to three lines, breaking the Designer's
+     two-line rule. Captions need about 6 words at 60 px.
+  4. The page must be written for this renderer: motion as CSS animations
+     or inside `seek(t)` only. Timers, transitions and free-running script
+     loops are not captured correctly. The template's header says so.
+  5. The safe box leaves the bottom third empty when the chart is three
+     bars; real videos need a bigger chart or the key number there.
+
+**Concepts.** A: yes, as tested; bars, counters, dot grids, timelines and
+scale drawings are all plain HTML/SVG. Maps need outline shapes with a
+licence (see data below). B: yes, and trivially, which is its weakness.
+C: yes mechanically, but each video is a custom animation and I agree with
+the Designer that the captions are too much to read; expect more than one
+run per video.
+
+**Time per video and videos per run.** Rendering is under a minute, so it
+is not the limit. Estimate, not measured, for one A video: read and record
+the figure at source, write the page with a chart type that differs from
+the last video, render, look at stills, fix, write `post.md` and the cover:
+most of one run. **One video per run is realistic; I would not promise
+two** until four or five chart components exist, and even then the fact
+check is the slow part. Building those components takes the first two or
+three videos, not a separate run.
+
+**Data sources for A: what this container could reach (curl, this run).**
+- Refused by the proxy (403 on connect, host not allowed): www.census.gov,
+  api.census.gov, data.census.gov, www.noaa.gov, oceanservice.noaa.gov,
+  www.usgs.gov, earthquake.usgs.gov, science.nasa.gov, nssdc.gsfc.nasa.gov,
+  api.nasa.gov, www.bls.gov, api.bls.gov, data.bls.gov, catalog.data.gov,
+  www.eia.gov, api.worldbank.org, data.worldbank.org, ourworldindata.org,
+  en.wikipedia.org, www.wikidata.org, www.naturalearthdata.com,
+  cdn.jsdelivr.net, unpkg.com, www.tiktok.com.
+- Reached (HTTP 200): support.google.com, raw.githubusercontent.com,
+  registry.npmjs.org.
+- **So no primary dataset for any of the ten titles is readable today, and
+  no video with a real figure can be made.** This matches Scout's finding.
+  I will not take a figure from memory, a search snippet or a copy on
+  GitHub: a number in a fact video has to be read at the agency's page.
+- Map outlines only: the npm registry is reachable, and it lists `us-atlas`
+  (US state and county shapes, built from Census Bureau boundary files) and
+  `world-atlas` (built from Natural Earth), both marked ISC. I read only the
+  registry's licence field; I did not install them or read the underlying
+  data terms. That could cover map shapes later; it gives no figures.
+- The smallest useful addition to OWNER 10 is the hosts that serve numbers
+  directly: api.census.gov, earthquake.usgs.gov, nssdc.gsfc.nasa.gov and
+  api.bls.gov, besides the agencies' main sites already listed there.
+
+**What I would change in the concept and test.**
+- Titles 2, 3, 5, 6 and 7 are bars, a scale drawing or a dot grid and can
+  be made as soon as the hosts open. Titles 1 and 9 want a map, so they
+  come later. Title 8 needs care: "most common job" depends on how BLS
+  groups occupations.
+- Keep every video's last 2 seconds still and complete, and use that frame
+  as `cover.png`.
+- The fixed rhythm (question, countdown, reveal) is what Scout's quote from
+  YouTube warns about. From the build side, varying the chart type, ground
+  and layout per video is cheap; I will do it, and say in `post.md` what
+  differs from the previous video.
+- What would stop it for me: approving the test before OWNER 10 is done.
+  Until then the only honest output is more placeholders.
 
 ### Treasurer
 (Asked for: how any platform income would be recorded, and the view that it

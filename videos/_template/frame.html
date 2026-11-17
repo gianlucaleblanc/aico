@@ -1,14 +1,20 @@
 <!doctype html>
-<!-- Designer's starter frame for code-rendered vertical shorts (2026-11-16). NOT a video and carries no facts: all text is placeholder.
-     Video agent: copy into videos/<date>-<slug>/source/ and change freely; vary the layout per video (see board/2026-11-16-video-channel.md, Designer view).
-     Render at viewport 1080x1920, deviceScaleFactor 1. Fonts: Inter and JetBrains Mono as installed in the container (no web fonts, nothing downloaded).
-     Add ?guides=1 to see the safe area. Set data-theme on <html> to "ink", "paper" or "teal". -->
-<html lang="en" data-theme="ink"><head><meta charset="utf-8"><meta name="viewport" content="width=1080">
+<!-- Starter frame for code-rendered vertical shorts. Designer's frame of 2026-11-16, reworked by Video on 2026-11-17 so it can be rendered
+     frame by frame with render.js (same folder). NOT a video and carries NO facts: every word and number is a placeholder.
+     How it is rendered: render.js freezes the page clock, then for each frame sets every CSS animation to time t and calls window.seek(t).
+     So: (1) do all motion with CSS animations (animation-delay places them on the timeline) or inside seek(t); never setTimeout/setInterval,
+     requestAnimationFrame loops or CSS transitions - they will not be captured correctly. (2) Set data-duration (seconds) on <html>.
+     Copy into videos/<date>-<slug>/source/ and change freely; vary layout and chart type per video (board/2026-11-16-video-channel.md).
+     Viewport 1080x1920, deviceScaleFactor 1. Fonts: Inter, Inter Display, JetBrains Mono as installed in the container (nothing downloaded).
+     Preview in a browser: plays in real time. ?guides=1 shows the safe area, ?theme=ink|paper|teal, ?t=3.2 shows the still at 3.2 s. -->
+<html lang="en" data-theme="ink" data-duration="5"><head><meta charset="utf-8"><meta name="viewport" content="width=1080">
 <title>Frame template (placeholder)</title>
 <style>
 :root{--bg:#101a2e;--fg:#f5f3ec;--dim:#b9c2d3;--a:#ffb84d;--b:#5fd0c5;--track:#26334f}
 [data-theme=paper]{--bg:#f5f1e6;--fg:#141b2b;--dim:#4a5468;--a:#a8480a;--b:#0d6b63;--track:#d9d2bf}
 [data-theme=teal]{--bg:#0c3b3a;--fg:#f4f7f2;--dim:#b6d2cd;--a:#ffd166;--b:#ff9e8a;--track:#1b5553}
+/* Timeline of this placeholder, in seconds. A real 25-30 s video stretches these: question 0, countdown 3-8, reveal 8-22, twist+source 22-28. */
+:root{--t-count:0s;--d-count:2s;--t-reveal:2s;--t-src:3.5s}
 *{box-sizing:border-box;margin:0}
 html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg);color:var(--fg);font-family:Inter,"Liberation Sans",sans-serif;font-feature-settings:"tnum"}
 /* Safe area: keep all text inside. Top 220, bottom 420, left 72, right 168 are the Designer's cautious margins for the apps' own buttons and captions, not platform-published figures. */
@@ -19,27 +25,46 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg);color:
 .num{font:800 150px/1 "Inter Display",Inter,sans-serif;color:var(--a)}
 .rows{display:grid;gap:26px;margin-top:auto}
 .row{display:grid;gap:12px}.row .lab{display:flex;justify-content:space-between;font:600 52px/1.1 Inter,sans-serif}
-.row .val{font-family:"JetBrains Mono",monospace;font-weight:700}
-.bar{height:48px;border-radius:10px;background:var(--track);overflow:hidden}.bar i{display:block;height:100%;width:var(--w);background:var(--b);border-radius:10px;transform-origin:left;animation:grow 1.2s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
-.row.hit .bar i{background:var(--a)}.row.hit .lab{color:var(--a)}
-.src{font:500 40px/1.2 Inter,sans-serif;color:var(--dim)} /* smallest text allowed: 40px */
-.timer{position:absolute;left:72px;right:168px;top:180px;height:14px;border-radius:7px;background:var(--track)}.timer i{display:block;height:100%;border-radius:7px;background:var(--a);animation:drain 5s linear both}
-@keyframes grow{from{transform:scaleX(0)}}@keyframes drain{to{width:0}}
+.row .val{font-family:"JetBrains Mono",monospace;font-weight:700;animation:show .01s linear both;animation-delay:calc(var(--t-reveal) + var(--d,0s))}
+.bar{height:48px;border-radius:10px;background:var(--track);overflow:hidden}
+.bar i{display:block;height:100%;width:var(--w);background:var(--b);border-radius:10px;transform-origin:left;animation:grow 1.2s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--t-reveal) + var(--d,0s))}
+.row.hit .bar i{animation-name:grow,hitbar;animation-duration:1.2s,.3s;animation-delay:calc(var(--t-reveal) + var(--d,0s)),calc(var(--t-reveal) + var(--d,0s) + 1.2s)}
+.row.hit .lab{animation:hitlab .3s linear both;animation-delay:calc(var(--t-reveal) + var(--d,0s) + 1.2s)}
+.src{font:500 40px/1.2 Inter,sans-serif;color:var(--dim);animation:show .4s ease-out both;animation-delay:var(--t-src)} /* smallest text allowed: 40px */
+.timer{position:absolute;left:72px;right:168px;top:180px;height:14px;border-radius:7px;background:var(--track)}
+.timer i{display:block;height:100%;border-radius:7px;background:var(--a);transform-origin:left;animation:drain var(--d-count) linear both;animation-delay:var(--t-count)}
+.ph{position:absolute;left:72px;top:120px;font:700 40px/1 "JetBrains Mono",monospace;color:var(--bg);background:var(--a);padding:8px 16px;border-radius:8px}
+@keyframes grow{from{transform:scaleX(0)}}@keyframes drain{to{transform:scaleX(0)}} /* not width: "auto" to 0 does not interpolate, the bar would jump */@keyframes show{from{opacity:0}}
+@keyframes hitbar{to{background:var(--a)}}@keyframes hitlab{to{color:var(--a)}}
 .guides .safe{outline:4px dashed #f0f}
 </style></head><body>
+<div class="ph">PLACEHOLDER - NOT REAL DATA</div>
 <div class="timer"><i></i></div>
 <div class="safe">
   <p class="kicker">Guess first</p>
   <h1 class="q">Placeholder question in five or six words a line?</h1>
-  <p class="cap">One caption, two lines at most, no full stop needed</p>
+  <p class="cap">Made-up numbers, render test only</p>
   <div class="rows">
-    <div class="row"><div class="lab"><span>Option A</span><span class="val">00</span></div><div class="bar"><i style="--w:38%"></i></div></div>
-    <div class="row hit"><div class="lab"><span>Option B</span><span class="val">00</span></div><div class="bar"><i style="--w:92%;--d:.15s"></i></div></div>
-    <div class="row"><div class="lab"><span>Option C</span><span class="val">00</span></div><div class="bar"><i style="--w:61%;--d:.3s"></i></div></div>
+    <div class="row"><div class="lab"><span>Option A</span><span class="val" data-to="38">0</span></div><div class="bar"><i style="--w:38%"></i></div></div>
+    <div class="row hit" style="--d:.15s"><div class="lab"><span>Option B</span><span class="val" data-to="92">0</span></div><div class="bar"><i style="--w:92%"></i></div></div>
+    <div class="row" style="--d:.3s"><div class="lab"><span>Option C</span><span class="val" data-to="61">0</span></div><div class="bar"><i style="--w:61%"></i></div></div>
   </div>
-  <p class="src">Source: [agency, dataset, year]</p>
+  <p class="src">Source: [agency, dataset, year] (placeholder)</p>
 </div>
 <script>
 const q=new URLSearchParams(location.search);if(q.get('guides'))document.body.classList.add('guides');if(q.get('theme'))document.documentElement.dataset.theme=q.get('theme');
+// Anything driven by script goes in seek(t): t is seconds from the start of the video. Must be a pure function of t.
+const ease=x=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
+const secs=(el,name)=>parseFloat(getComputedStyle(el).getPropertyValue(name))||0;
+window.seek=function(t){
+  document.querySelectorAll('.val[data-to]').forEach(el=>{
+    const start=secs(el,'--t-reveal')+secs(el,'--d');            // counter runs with its bar
+    el.textContent=Math.round(ease((t-start)/1.2)*Number(el.dataset.to));
+  });
+};
+// Freeze every CSS animation at time t and run seek(t). render.js calls this once per frame.
+window.renderAt=function(t){document.getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000});window.seek(t)};
+if(q.get('t')!==null)renderAt(Number(q.get('t')));
+else if(!window.__render){const t0=performance.now();(function tick(){window.seek((performance.now()-t0)/1000);requestAnimationFrame(tick)})()} // live preview only
 </script>
 </body></html>
