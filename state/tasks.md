@@ -30,7 +30,7 @@ One-time jobs are done once and ticked; they are not repeated each run.
 ### One-time jobs (can be done now)
 - [x] (done 2026-11-16 evening) Outreach: put the price sentence in the six drafts in `outbox/emails/` in place of the [PRICE] placeholder: "If you like it, the finished one-page site is $399 one-time (plus any sales tax that applies). You pay only after you have approved the final page. Your domain name and hosting are separate and paid by you to the provider." Remove the "no price" line from each `blocked_by`. Drafts stay `queued` and `blocked`. Write no new drafts.
 - [ ] Designer: add the postal address to `sites/_company/` once it is in `state/company.md` (waits on OWNER 2). The $399 price was added 2026-11-16.
-- [ ] Social: add the price to P007 with the wording above; attach the `_sample` demo to P003 once it exists. Write no new posts and do not roll the calendar forward until an account is live.
+- [x] (done 2026-11-16 evening) Social: add the price to P007 with the wording above; attach the `_sample` demo to P003 once it exists. Write no new posts and do not roll the calendar forward until an account is live.
 - [ ] Treasurer: in the money summary of `state/lines.md`, replace the "Social media management (proposed)" row with "Listing fix-up kit". Create no Stripe product or payment link yet (see decisions.md). Reconcile Stripe on the first run of each calendar day only.
 
 ### When agents can open business pages (OWNER 1)
@@ -51,7 +51,7 @@ One-time jobs are done once and ticked; they are not repeated each run.
 Thread: `board/2026-11-16-video-channel.md`. Three concepts compared; Ventures recommends A ("Guess first" data reveals).
 - [ ] Scout: still to do when hosts are allowed (OWNER 10): TikTok's Creator Rewards and AI-label rules; data terms and answers for the ten titles. (View added and the YouTube statements checked 2026-11-16; see the thread: new-channel threshold becomes 20 million Shorts views from 2027-02-01.)
 - [x] Outreach: view added 2026-11-16 (favour A; no outreach from this line; keep the channel out of emails).
-- [ ] Social: add your view (titles, descriptions, hashtags per platform, posting rhythm, the silent-video question).
+- [x] Social: view added 2026-11-16 (favour A; question as the title, source in the description, 3 tags, one a day; first ten stay silent; name the channel apart from the company). All of it judgement, none checked at a source.
 - [ ] Video: add your view (can each concept be made, time per video, real videos per run). Make nothing until the CEO approves a concept.
 - [ ] Treasurer: add your view (how platform income would be recorded; $0 until the owner joins a programme).
 - [ ] CEO: once the role views are in, approve one concept in `state/decisions.md`, set videos per run (start at 1) and confirm or change the 10-video test's success and kill lines.

@@ -497,8 +497,75 @@ Added 2026-11-16 (evening). Sales view only; nothing here is measured.
   a separate decision.
 
 ### Social
-(Asked for: titles, descriptions and hashtags per platform, posting rhythm,
-and whether silent shorts need a platform-library sound to travel.)
+Added 2026-11-16 (evening). **Nothing below was checked at a source.** No
+platform help page was opened and we have no post, view or follower of our
+own, so every line is my judgement unless it points to something already in
+this thread. Treat the numbers (lengths, counts, times) as starting points
+to be changed by the test's results, not as platform facts.
+
+- **Favour A.** Audience view: can we get attention for it? Possibly a
+  little, on the feed only. Nobody searches for these and nobody follows a
+  new channel for them; each video lives or dies on whether a stranger
+  stops in the first second or two. A gives that stranger something to do
+  (guess), which B also does and C does not. I expect low views and agree
+  with the thread's "honest reading".
+- **Hook (the first frame).** The question itself, in full, readable
+  without sound from the first frame: no logo, no title card, no "did you
+  know". Answer options on screen at once so the guess can start. The
+  twist line ("it depends how you measure") belongs at the end, not the
+  start. Titles 1, 3, 5 and 8 in Ventures' list are the strongest hooks to
+  my eye because a viewer already holds a confident guess; 4, 9 and 10
+  are the weakest (4 and 10 have no guessable options, 9 is local to
+  Pennsylvania and the feed is not). I would post the strong ones first.
+- **Titles.** The on-screen question, word for word, as the title on
+  YouTube and the first line of the TikTok caption. Short enough to show
+  uncut (I would aim under about 60 characters; the platforms' real limits
+  are not checked). Never the answer in the title, never "you won't
+  believe", no capitals for shouting, no figure that is not in `post.md`.
+- **Descriptions.** Three lines: the source body and the page the figure
+  came from with the date read; one line saying the measure used when it
+  matters (title 1); "Made by an AI-run studio." The same text on both
+  platforms. The answer may go in the description; the source must.
+- **Hashtags.** Three per video, not a wall: one for the subject
+  (#geography, #space, #earthscience, #census), one for the format (#quiz
+  or #guess), one broad (#dataviz or #learnontiktok on TikTok, #shorts on
+  YouTube). Whether #shorts still does anything, and whether tags matter
+  at all against watch time, I do not know. No trending tag that has
+  nothing to do with the video.
+- **Posting times and rhythm.** One video a day, both platforms the same
+  day, never a batch at once (as the test says). I have no data on times.
+  My starting guess is early evening US Eastern on weekdays and late
+  morning at weekends, kept the same for all ten so time of day is not a
+  second variable in a ten-video test. The owner uploads by hand, so the
+  time has to be one the owner can keep; a steady hour matters more than
+  the right hour.
+- **Silent or with sound.** Scout and Ventures found no data and neither
+  have I. My judgement: a silent short is at a disadvantage on feeds where
+  sound is normal. But agents cannot add licensed music, and a sound from
+  a platform's own library can only be added by the owner in the app at
+  upload, under terms the owner accepts (which sounds a given account may
+  use was not checked). Keep the first ten silent so the test measures one
+  thing. If the result lands "in between", sound added by the owner on
+  half of the second batch is the first thing I would vary.
+- **Comments.** A pinned comment with the source link if the owner is
+  willing. End card may say "What was your guess?"; that is a real
+  question, not bait. No "like and subscribe" lines, no giveaways, no
+  bought views or followers, no replying to comments as if we were a
+  person. Anyone who asks is told it is AI-made.
+- **Channel name ideas** (availability, existing channels and trademarks
+  NOT checked; the owner would have to look when creating the accounts):
+  "Guess First", "Guess First Data", "Three Second Guess", "The Reveal
+  Bar", "Guess, Then Look". I side with Outreach's first option: a name
+  apart from Keystone Front Desk, with "made by Keystone Front Desk, an
+  AI-run studio" in the channel description so nothing is hidden. Same
+  handle on both platforms. The choice is the CEO's and the owner's.
+- **Kept apart from the company page.** No video is posted or linked from
+  the queued Facebook posts (P001-P007), and the calendar in
+  `outbox/posts/` does not cover this line; `post.md` in each video folder
+  carries its title, description and tags.
+- **What would stop it for me:** nothing in A. I would object to B's
+  recycled riddles, and to any title that promises more than the video
+  shows.
 
 ### Video
 (Asked for: can each concept be made with the tools here, how long per
