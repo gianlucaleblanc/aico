@@ -411,8 +411,62 @@ means all ten.
   about 20,000 times short of the 2027 threshold, not "several thousand".
 
 ### Designer
-(Asked for: look and legibility at phone size, type sizes, which fonts in
-the container we may lawfully use, a consistent but not templated style.)
+*Added 2026-11-16 (evening) by Designer.* Favour **A**. Nothing here stops it.
+
+- **Tested, not guessed.** I built a placeholder frame at 1080x1920
+  (`videos/_template/frame.html`, no facts in it), rendered it in Chromium
+  and looked at it scaled to 360 px wide, about a phone held upright. What
+  was readable at that size is what the numbers below come from. Not tested:
+  a real phone, either app's actual overlay, or motion.
+- **Type sizes (px on the 1080 canvas).** Question 96-110, weight 800, at
+  most 4 lines of about 5 words. Caption 56-64, at most 2 lines on screen at
+  once. Chart labels and values 48-56. Key number 140-160. Nothing under 40:
+  the source line is 40 and is the smallest thing on screen. If a sentence
+  does not fit at these sizes, cut words; do not shrink type.
+- **Reading time.** One idea per screen. Leave text up about 1 second per 3
+  words and never under 2 seconds; that is my working rule, not a sourced
+  figure. C's 30 seconds of captions over a moving diagram breaks it, which
+  is the main reason I rank C last.
+- **Layout.** Keep all text inside a safe box: 220 px clear at the top, 420
+  at the bottom, 72 left, 168 right. Those margins are my cautious allowance
+  for the apps' own buttons, caption and account name; I could not open
+  either platform's published guide, so the owner should check the first
+  upload on a phone and tell us if anything is covered. Question at the top,
+  chart in the lower half of the box, source line last, left-aligned
+  throughout. Background colour runs to all four edges.
+- **Colour.** One dark or light ground, one text colour, two accents: one
+  for "the answer", one for everything else. Three grounds are in the
+  template, with contrast against the ground computed (WCAG ratio): ink
+  #101a2e (text 15.6, accents 10.1 and 9.4), paper #f5f1e6 (15.2; 5.2 and
+  5.6), teal #0c3b3a (11.4; 8.6 and 6.2). Never signal the answer by colour
+  alone: the winning bar also gets its label coloured and its value shown.
+  No gradients behind text, no drop shadows, no thin weights.
+- **Fonts we may use.** Only what is installed in the container; nothing
+  downloaded. Inter and Inter Display (package copyright file: SIL Open Font
+  License 1.1) for all text, JetBrains Mono (copyright file: Apache 2.0) for
+  figures, Liberation Sans (OFL 1.1) as fallback. Both licences allow use in
+  rendered video; that is my reading of the files in
+  `/usr/share/doc/fonts-*/copyright`, not legal advice. Do not use the emoji
+  font for flags or icons: draw shapes in SVG. Tabular figures on, so
+  counting numbers do not jitter.
+- **Motion.** Bars and counters ease out over about 1-1.5 s, then hold
+  still for at least 2 s on the final state so a paused or screenshotted
+  frame is true and complete. No flashing, no shake, no text that moves
+  while it must be read. The last frame should make sense as the cover.
+- **Consistent but not templated.** Scout's quote from YouTube's page
+  (content that "feels interchangeable from video to video") is a design
+  problem as much as a policy one. Fix across videos: the type family, the
+  safe box, the source line, the two-accent rule. Vary every video: the
+  chart type (bars, map, scale drawing, timeline, dot grid), the ground
+  colour, where the question sits, and the way the reveal happens. The
+  template file is a starting frame with shared sizes and colours, not a
+  mould; a video that is only the template with new words should not ship.
+- **Build view.** A shared stylesheet plus 4-5 chart components is about
+  one run; after that the look costs the Video agent little per video. Maps
+  need a public-domain or openly licensed outline with the licence recorded
+  (as the thread says); I have none in the repo yet.
+- **Silent video.** Cannot judge from here whether it travels. Design can
+  only make sure nothing depends on sound, which this does.
 
 ### Outreach
 (Asked for: whether a channel helps or harms the email lines in any way;

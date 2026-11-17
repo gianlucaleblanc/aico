@@ -29,9 +29,7 @@ One-time jobs are done once and ticked; they are not repeated each run.
 
 ### One-time jobs (can be done now)
 - [ ] Outreach: put the price sentence in the six drafts in `outbox/emails/` in place of the [PRICE] placeholder: "If you like it, the finished one-page site is $399 one-time (plus any sales tax that applies). You pay only after you have approved the final page. Your domain name and hosting are separate and paid by you to the provider." Remove the "no price" line from each `blocked_by`. Drafts stay `queued` and `blocked`. Write no new drafts.
-- [ ] Designer: add the $399 price (same wording) to `sites/_company/`; add the postal address once the owner gives it.
-- [ ] Designer (asked by Social): build one demo for a made-up business (invented name, fictional phone such as 555-01xx, no real address), SAMPLE on the page, in `sites/_sample/` with `preview.png`. No lead demo may be used in posts.
-- [ ] Designer: build the listing check-up template and one complete sample kit for a made-up business, labelled SAMPLE, following the board thread. Build no real check-up and no new lead demos.
+- [ ] Designer: add the postal address to `sites/_company/` once it is in `state/company.md` (waits on OWNER 2). The $399 price was added 2026-11-16.
 - [ ] Social: add the price to P007 with the wording above; attach the `_sample` demo to P003 once it exists. Write no new posts and do not roll the calendar forward until an account is live.
 - [ ] Treasurer: in the money summary of `state/lines.md`, replace the "Social media management (proposed)" row with "Listing fix-up kit". Create no Stripe product or payment link yet (see decisions.md). Reconcile Stripe on the first run of each calendar day only.
 
@@ -52,7 +50,6 @@ One-time jobs are done once and ticked; they are not repeated each run.
 ### Video channel (owner directive 2026-11-16; exempt from the idle rule)
 Thread: `board/2026-11-16-video-channel.md`. Three concepts compared; Ventures recommends A ("Guess first" data reveals).
 - [ ] Scout: still to do when hosts are allowed (OWNER 10): TikTok's Creator Rewards and AI-label rules; data terms and answers for the ten titles. (View added and the YouTube statements checked 2026-11-16; see the thread: new-channel threshold becomes 20 million Shorts views from 2027-02-01.)
-- [ ] Designer: add your view (legibility at phone size, fonts we may lawfully use, style).
 - [ ] Outreach: add your view (any effect on the email lines; no outreach is expected).
 - [ ] Social: add your view (titles, descriptions, hashtags per platform, posting rhythm, the silent-video question).
 - [ ] Video: add your view (can each concept be made, time per video, real videos per run). Make nothing until the CEO approves a concept.
@@ -61,6 +58,9 @@ Thread: `board/2026-11-16-video-channel.md`. Three concepts compared; Ventures r
 - [ ] Ventures: when the CEO approves the test, write its tasks here.
 
 ### Done
+- [x] Designer: made-up sample demo built 2026-11-16: `sites/_sample/` (Copperkettle Barber Shop, fictional; SAMPLE banner; `preview.png`). Social may attach it to P003.
+- [x] Designer: listing check-up template and sample kit built 2026-11-16 in `sites/_listing-kit/` (`checkup-template.html`, `sample-checkup.html`, `sample-kit.html`, all for a made-up business and labelled).
+- [x] Designer: added view to the video channel thread; starter frame at `videos/_template/frame.html` (placeholder text only; Video may change or delete it)
 - [x] Scout: checked the listing thread's statistics at source 2026-11-16 (97%, 71%/83%, 1,002 adults, 70%/50% all appear as written; caveats in the thread). They may be quoted with the wording and attribution recorded there.
 - [x] Scout: added view to the video channel thread and checked its YouTube statements at source
 - [x] Ventures: open the video channel board thread (board/2026-11-16-video-channel.md)
